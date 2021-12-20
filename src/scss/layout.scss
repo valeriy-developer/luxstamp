@@ -1,0 +1,14 @@
+.container {
+  padding-left: size(146, 20);
+  padding-right: size(146, 20);
+  width: 100%;
+  position: relative;
+}
+
+@mixin col($start, $end) {
+  grid-column: #{$start}/#{$end + 1};
+}
+
+@mixin row($start, $end) {
+  grid-row: #{$start}/#{$end + 1};
+}
