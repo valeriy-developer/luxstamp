@@ -1,37 +1,149 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="utf-8" />
-    <title>Template</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#131116" />
-    <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="Template" />
-    <meta property="og:title" content="Template" />
-    <meta property="og:description" content="Template" />
-    <!-- BEGIN styles -->
-    <link rel="stylesheet" media="all" href="css/app.css" />
-    <!-- END styles -->
-  </head>
 
-  <body>
-    <main>
-      <ul>
-        <li class="test">Lorem</li>
-        <li class="test">ipsum</li>
-        <li class="test">dolor</li>
-        <li class="test">blah</li>
-        <li class="test">sit</li>
-        <li class="test">amet</li>
-      </ul>
-    </main>
-    <!-- BEGIN scripts -->
-    <script src="./js/runtime-app.js"></script>
-    <script src="./js/app.js"></script>
-    <!-- END scripts -->
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Luxstamp</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#131116" />
+  <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Template" />
+  <meta property="og:title" content="Template" />
+  <meta property="og:description" content="Template" />
+  <!-- BEGIN styles -->
+  <link rel="stylesheet" media="all" href="css/app.css" />
+  <!-- END styles -->
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <nav class="nav header__nav">
+        <div class="header__logo">
+          <img class="logo" src="./img/logo.png" alt="Логотип">
+          <p class="header__lang-name">Ua</p>
+          <img src="./img/arrow-down.png" alt="Указатель вниз">
+        </div>
+        <ul class="nav-menu header__menu">
+          <li class="nav-list header__list">
+            <a href="#">
+              Замовити онлайн
+            </a>
+          </li>
+          <li class="nav-list header__list">
+            <a href="#">
+              Переваги
+            </a>
+          </li>
+          <li class="nav-list header__list">
+            <a href="#">
+              Наші клієнти
+            </a>
+          </li>
+          <li class="nav-list header__list">
+            <a href="#">
+              Оплата та доставка
+            </a>
+          </li>
+          <li class="nav-list header__list">
+            <a href="#">
+              Контакти
+            </a>
+          </li>
+        </ul>
+        <div class="header__mob">
+          <div class="header__social">
+            <img class="header__network" src="./img/viber.svg" alt="Viber">
+            <img class="header__network" src="./img/telegram.svg" alt="Telegram">
+          </div>
+          <div class="header__hamburger">
+            <span class="header__bar"></span>
+            <span class="header__bar"></span>
+            <span class="header__bar"></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="wrapper hero__wrapper">
+          <div class="hero__content">
+            <div class="hero__text">
+              <h1 class="hero__title">
+                Виготовимо печатку, штамп або факсиміле, доки ви п’єте каву
+              </h1>
+              <p class="hero__desc">
+                Термін виготовлення — від 15 до 60 хвилин. Довічна гарантія на кліше. Доставка по місту та Україні.
+              </p>
+              <button class="button hero__button">
+                Замовити печатку
+              </button>
+            </div>
+            <div class="hero__img">
+              <img class="hero__main-img" src="./img/main-hero.png" alt="Штамп">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="hero__call">
+        <img class="hero__call-img" src="./img/call.svg" alt="Вызов">
+      </button>
+    </section>
+    <section class="section home">
+      <div class="container home__container">
+        <div class="home__wrapper">
+          <div class="home__name">
+            <div class="home__stripe--1"></div>
+            <h2 class="home__main">
+              Як зробити замовлення?
+            </h2>
+          </div>
+          <div class="home__about">
+            <div class="home__title">
+              <div class="home__stripe"></div>
+              <h3 class="home__obj">
+                Для ФОП
+              </h3>
+            </div>
+            <div class="home__desc">
+              <p class="home__text">
+                Для виготовлення потрібна фотографія/скан-копія витягу з ЕДР або вашого ідентифікаційного коду.
+              </p>
+            </div>
+            <div class="home__title">
+              <div class="home__stripe"></div>
+              <h3 class="home__obj">
+                Для ТОВ
+              </h3>
+            </div>
+            <div class="home__desc">
+              <p class="home__text">
+                Для держустанов та ТОВ для виготовлення потрібна фотографія або скан-копія витягу з ЕДРПОУ.
+              </p>
+            </div>
+            <div class="home__title">
+              <div class="home__stripe"></div>
+              <h3 class="home__obj">
+                Для адвоката/лікаря
+              </h3>
+            </div>
+            <div class="home__desc">
+              <p class="home__text">
+                Для виготовлення потрібна фотографія або скан-копія свідоцтва адвоката/диплома лікаря.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- BEGIN scripts -->
+  <script src="./js/runtime-app.js"></script>
+  <script src="./js/app.js"></script>
+  <!-- END scripts -->
+</body>
+
 </html>
