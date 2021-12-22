@@ -11,7 +11,7 @@
 .home__name {
     max-width: 50%;
     padding-right: vw(109);
-    
+
     @media (max-width: $br4) {
         max-width: 100%;
         padding-right: 0;
@@ -19,7 +19,7 @@
 }
 
 .home__stripe--1 {
-    width: 100%; 
+    width: 100%;
     height: 1px;
     border-style: solid;
     border-color: #c4c4c4;
@@ -50,7 +50,7 @@
 }
 
 .home__stripe {
-    width: 100%; 
+    width: 100%;
     height: 1px;
     border-style: solid;
     border-color: #c4c4c4;
