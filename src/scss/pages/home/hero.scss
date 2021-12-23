@@ -1,0 +1,80 @@
+.hero__content {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+
+    @media (max-width: $br1) {
+        flex-direction: column-reverse;
+        height: auto;
+        align-items: flex-start;
+        margin-top: size(256, 68);
+    }
+}
+
+.hero__text {
+    width: size(878, 335);
+    margin-top: size(70, 36);
+}
+
+.hero__title {
+    @include med;
+    font-size: size(60, 30);
+    line-height: 120%;
+    color: #3F3D56;
+    margin-bottom: size(32, 20);
+}
+
+.hero__desc {
+    @include reg;
+    font-size: size(20, 16);
+    line-height: 150%;
+    color: #3F3D56;
+    margin-bottom: size(48, 32);
+    width: size(602, 335);
+}
+
+.hero__button {
+    @include reg;
+    background-color: #DC5349;
+    box-shadow: 0px 18px 50px rgba(235, 87, 87, 0.35);
+    border-radius: 33px;
+    color: #fff;
+    font-size: size(20, 16);
+    height: size(72, 49);
+    width: size(323, 237);
+    line-height: 100%;
+    padding-top: size(25, 16);
+    padding-bottom: size(25, 16);
+    padding-right: size(75, 49);
+    padding-left: size(75, 49);
+
+    &:hover {
+        background-color: #dd4136;
+    }
+}
+
+.hero__main-img {
+    @include cover;
+    width: size(593, 208);
+    height: size(567, 199);
+}
+
+.hero__call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    border-radius: 100px;
+    bottom: 4%;
+    right: 4%;
+    width: size(100, 80);
+    height: size(100, 80);
+    background-color: #DC5349;
+    border-radius: 50%;
+
+    @media (max-width: $br1) {
+        display: none;
+    }
+}

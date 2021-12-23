@@ -31,6 +31,8 @@
 }
 
 .home__main {
+    @include reg;
+    font-weight: 450;
     margin-top: vw(17);
     font-size: size(60, 30);
     line-height: 120%;
@@ -58,6 +60,8 @@
 }
 
 .home__obj {
+    @include reg;
+    font-weight: 450;
     line-height: 120%;
     max-width: size(510, 335);
     margin-top: 12px;

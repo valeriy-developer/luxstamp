@@ -1,0 +1,100 @@
+.header {
+    @include reg;
+    font-size: size(18, 16);
+    line-height: 100%;
+    color: #3F3D56;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    padding-top: size(16, 12);
+    padding-bottom: size(16, 12);
+    background-color: #EBEBEB;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    @include cover;
+    width: size(195, 97);
+    height: size(58, 29);
+    margin-right: size(45, 9);
+}
+
+.header__lang-name {
+    padding-right: size(3, 6);
+}
+
+.header__arrow {
+    cursor: pointer;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__list {
+    @include reg;
+    font-size: size(18, 14);
+    margin-right: vw(50);
+
+    &:nth-child(5) {
+        margin-right: 0;
+    }
+
+    @media (max-width: $br1) {
+        display: none;
+    }
+}
+
+.header__network {
+    margin-right: 8px;
+
+    &:nth-child(2) {
+        margin-right: 0;
+    }
+
+    @media (max-width: $br1) {
+        display: block;
+    }
+}
+
+.header__mob {
+    display: none;
+    align-items: center;
+
+    @media (max-width: $br1) {
+        display: flex;
+    }
+}
+
+.header__social {
+    display: flex;
+    align-items: center;
+}
+
+.header__hamburger {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 16px;
+    width: 26px;
+}
+
+.header__bar {
+    width: 100%;
+    height: 2px;
+    background-color: #3F3D56;
+}

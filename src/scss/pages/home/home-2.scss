@@ -27,8 +27,10 @@
 }
 
 .home-2__obj {
-    margin-top: vw(17);
-    margin-bottom: size(12,8);
+    @include reg;
+    font-weight: 450;
+    margin-top: size(17, 8);
+    margin-bottom: size(12, 8);
     font-size: size(42, 30);
     line-height: 120%;
 
@@ -37,7 +39,7 @@
     }
 }
 
-.home-2__stripe {
+.home-2__stripe--1 {
     width: 100%;
     height: 1px;
     border-style: solid;
@@ -45,10 +47,22 @@
     background-color: #c4c4c4;
 }
 
+.home-2__stripe--2 {
+    width: 100%;
+    height: 1px;
+    border-style: solid;
+    border-color: #c4c4c4;
+    background-color: #c4c4c4;
+
+    @media (max-width: $br4) {
+        margin-top: 52px;
+    }
+}
+
 .home-2__number {
     @include med-dm;
     color: #DC5349;
-    font-size: size(14, 12 );
+    font-size: size(14, 12);
     line-height: 100%;
 }
 
@@ -58,4 +72,13 @@
     font-size: size(20, 16);
     max-width: size(510, 335);
     margin-bottom: size(40, 32);
+
+    &:nth-child(6n) {
+        margin-bottom: 0;
+    }
+}
+
+.home-2__text {
+    display: flex;
+    gap: 12px;
 }
