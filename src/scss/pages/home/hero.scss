@@ -13,7 +13,7 @@
 }
 
 .hero__text {
-    width: size(878, 335);
+    max-width: size(878, 335);
     margin-top: size(70, 36);
 }
 
@@ -31,7 +31,7 @@
     line-height: 150%;
     color: #3F3D56;
     margin-bottom: size(48, 32);
-    width: size(602, 335);
+    max-width: size(602, 335);
 }
 
 .hero__button {

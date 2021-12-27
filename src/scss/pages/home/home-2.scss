@@ -3,7 +3,7 @@
     @include reg;
     color: #3F3D56;
 
-    @media (max-width: $br4) {
+    @media (max-width: $br2) {
         flex-direction: column;
     }
 }
@@ -12,7 +12,7 @@
     width: 50%;
     padding-right: vw(109);
 
-    @media (max-width: $br4) {
+    @media (max-width: $br2) {
         width: 100%;
         padding-right: 0;
     }
@@ -21,7 +21,7 @@
 .home-2__about {
     width: 50%;
 
-    @media (max-width: $br4) {
+    @media (max-width: $br2) {
         width: 100%;
     }
 }
@@ -31,10 +31,10 @@
     font-weight: 450;
     margin-top: size(17, 8);
     margin-bottom: size(12, 8);
-    font-size: size(42, 30);
+    font-size: size(40, 30);
     line-height: 120%;
 
-    @media (max-width: $br4) {
+    @media (max-width: $br2) {
         margin-bottom: 8px;
     }
 }
@@ -54,7 +54,7 @@
     border-color: #c4c4c4;
     background-color: #c4c4c4;
 
-    @media (max-width: $br4) {
+    @media (max-width: $br2) {
         margin-top: 52px;
     }
 }
@@ -72,6 +72,10 @@
     font-size: size(20, 16);
     max-width: size(510, 335);
     margin-bottom: size(40, 32);
+
+    @media (max-width: $br2) {
+        max-width: 100%;
+    }
 
     &:nth-child(6n) {
         margin-bottom: 0;

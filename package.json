@@ -65,6 +65,7 @@
     "yargs": "^13.2.4"
   },
   "dependencies": {
+    "@emotionagency/utils": "^1.0.0",
     "gsap": "^3.3.4"
   }
 }

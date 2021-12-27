@@ -1,0 +1,139 @@
+.home-9__stripe {
+    width: 100%;
+    height: 1px;
+    border-style: solid;
+    border-color: #c4c4c4;
+    background-color: #c4c4c4;
+
+    @media (max-width: $br1) {
+        display: none;
+    }
+}
+
+.home-9__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: size(60, 60);
+    margin-bottom: size(60, 20);
+}
+
+.home-9__reviews {
+    display: flex;
+
+    @media (max-width: $br1) {
+        flex-direction: column-reverse;
+    }
+}
+
+.home-9__small-text {
+    @include reg;
+    font-size: size(24, 24);
+    line-height: 120%;
+    color: #3F3D56;
+}
+
+.home-9__big-text {
+    @include reg;
+    font-size: size(60, 30);
+    line-height: 120%;
+    color: #3F3D56;
+    font-weight: 450;
+    padding-right: 20px;
+
+    @media (max-width: $br1) {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+.home-9__med-text {
+    @include reg;
+    font-size: size(32, 20);
+    line-height: 150%;
+    color: #3F3D56;
+    font-weight: 450;
+    margin-top: 20px;
+
+    @media (max-width: $br1) {
+        margin-top: 0;
+        margin-bottom: 32px;
+    }
+}
+
+.home-9__arrow {
+    @media (max-width: $br1) {
+        display: none;
+    }
+}
+
+.home-9__button {
+    @include reg;
+    font-weight: 450;
+    background-color: #DC5349;
+    box-shadow: 0px 18px 50px rgba(235, 87, 87, 0.35);
+    border-radius: 33px;
+    color: #fff;
+    font-size: size(20, 16);
+    padding: size(26, 16) size(78, 50);
+    line-height: 120%;
+    margin-top: 20px;
+    max-width: 323px;
+    height: 72px;
+    padding: 15px;
+    width: 100%;
+
+
+    &:hover {
+        background-color: #dd4136;
+    }
+
+    @media (max-width: $br1) {
+        margin-top: 0;
+    }
+}
+
+.home-9__block--1 {
+    width: 33%;
+    padding-right: 70px;
+
+    @media (max-width: $br1) {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+.home-9__block--2 {
+    width: 69%;
+
+    @media (max-width: $br1) {
+        width: 100%;
+    }
+}
+
+.home-9__text--1 {
+    width: 33%;
+    padding-right: size(70, 40);
+
+    @media (max-width: $br1) {
+        display: none;
+    }
+}
+
+.home-9__text--2 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 68%;
+
+    @media (max-width: $br1) {
+        max-width: 60%;
+    }
+
+    @media (max-width: $br2) {
+        max-width: 80%;
+    }
+
+    @media (max-width: $br3) {
+        max-width: 100%;
+    }
+}
