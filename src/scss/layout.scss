@@ -16,5 +16,3 @@
 @mixin row($start, $end) {
   grid-row: #{$start}/#{$end + 1};
 }
-
-

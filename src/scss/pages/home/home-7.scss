@@ -145,6 +145,10 @@
     &:hover {
         background-color: #dd4136;
     }
+
+    @media (max-width: $br1) {
+        display: none;
+    }
 }
 
 .home-7__block--2 {
@@ -179,5 +183,27 @@
     margin-bottom: size(120, 32)
 }
 
+.home-7__facebook--1 {
+    display: none;
+    padding-bottom: 60px;
 
+    @media (max-width: $br1) {
+        display: block;
+    }
+}
 
+.home-7__small-button--1 {
+    @include reg;
+    font-weight: 450;
+    background-color: #DC5349;
+    box-shadow: 0px 18px 50px rgba(235, 87, 87, 0.35);
+    border-radius: 33px;
+    color: #fff;
+    font-size: 14px;
+    padding: size(11, 12) size(19, 20);
+    line-height: 120%;
+
+    &:hover {
+        background-color: #dd4136;
+    }
+}
