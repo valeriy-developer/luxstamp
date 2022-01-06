@@ -1,12 +1,9 @@
 import {menu} from './burger.js'
-import {popup} from './popUp.js'
-import {form} from './input.js'
-import {complete} from './complete.js'
+
+import {form} from './form.js'
 
 menu()
-popup()
 form()
-complete()
 
 const lerp = (a, b, n) => {
   return a * (1 - n) + b * n
@@ -22,7 +19,6 @@ const customCursor = () => {
   const $cursor = document.querySelector('[data-cursor]')
   const $links = document.querySelectorAll('a')
   const coords = $cursor.getBoundingClientRect()
-
 
   const onMouseEnter = () => {
     $cursor.classList.add('cursor--hovered')
@@ -42,7 +38,6 @@ const customCursor = () => {
     //   $cursor.classList.remove('cursor--hovered')
     // }
   }
-
 
   document.addEventListener('mousemove', onMouseMove)
 

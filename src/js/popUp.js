@@ -1,19 +1,26 @@
-export const popup = () => {
-  const $popUp = document.querySelector('.order__pop-up')
-  const $closeButton = $popUp.querySelector('.pop-up__close-btn')
-  const $openButton = document.querySelector('.hero__button')
-
-  const $backdrop = $popUp.querySelector('.order__backdrop')
+export const popup = ($popUp, $openButton) => {
+  const $closeButton = $popUp.querySelector('[data-popup-close]')
+  const $backdrop = $popUp.querySelector('[data-backdrop]')
 
   const openPopUp = () => {
-    $popUp.classList.add('order__pop-up--open')
+    $popUp.classList.add('e-open')
+    document.body.style.overflow = 'hidden'
   }
 
   const closePopUp = () => {
-    $popUp.classList.remove('order__pop-up--open')
+    $popUp.classList.remove('e-open')
+    document.body.style.overflow = 'initial'
   }
 
   $closeButton.addEventListener('click', closePopUp)
   $backdrop.addEventListener('click', closePopUp)
-  $openButton.addEventListener('click', openPopUp)
+
+  if ($openButton) {
+    $openButton.addEventListener('click', openPopUp)
+  }
+
+  return {
+    openPopUp,
+    closePopUp,
+  }
 }

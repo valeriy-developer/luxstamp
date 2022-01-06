@@ -1,9 +1,16 @@
 import {validation} from './validation.js'
+import {popup} from './popup.js'
 
 export const form = () => {
   const $form = document.querySelector('.form')
   const $inputs = $form.querySelectorAll('.input')
   const $wrapperClass = '.input-wrapper'
+
+  const {closePopUp} = popup(
+    document.querySelector('[data-form-popup]'),
+    document.querySelector('[data-open-popup]')
+  )
+  const {openPopUp} = popup(document.querySelector('[data-complete-popup]'))
 
   const validateInputs = el => {
     if (el.dataset.validation === 'required') {
@@ -17,7 +24,7 @@ export const form = () => {
     }
   }
 
-  const callMe = e => {
+  const onSubmit = e => {
     e.preventDefault()
     const errors = []
     const formData = {}
@@ -34,6 +41,8 @@ export const form = () => {
         input.value = ''
         input.blur()
         input.closest($wrapperClass).classList.remove('active')
+        closePopUp()
+        openPopUp()
       })
 
       console.log(formData)
@@ -64,7 +73,7 @@ export const form = () => {
     input.addEventListener('input', onInput)
   })
 
-  $form.addEventListener('submit', callMe)
+  $form.addEventListener('submit', onSubmit)
 
   return () => {
     $inputs.forEach(input => {
@@ -73,6 +82,6 @@ export const form = () => {
       input.removeEventListener('input', onInput)
     })
 
-    $form.removeEventListener('submit', callMe)
+    $form.removeEventListener('submit', onSubmit)
   }
 }

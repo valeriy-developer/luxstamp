@@ -87,7 +87,7 @@
               <p class="hero__desc">
                 Термін виготовлення — від 15 до 60 хвилин. Довічна гарантія на кліше. Доставка по місту та Україні.
               </p>
-              <button class="button hero__button">
+              <button data-open-popup class="button hero__button">
                 Замовити печатку
               </button>
             </div>
@@ -729,10 +729,10 @@
         </div>
       </div>
     </footer>
-    <div class="order__pop-up">
-      <div class="order__backdrop"></div>
+    <div data-form-popup class="order__pop-up">
+      <div data-backdrop class="order__backdrop"></div>
       <div class="order__window">
-        <button class="close-btn pop-up__close-btn" aria-label="close pop up">
+        <button data-popup-close class="close-btn pop-up__close-btn" aria-label="close pop up">
           <span class="close-btn__line"></span>
           <span class="close-btn__line"></span>
         </button>
@@ -740,7 +740,7 @@
           Оставьте свой номер телефона
           и мы вам перезвоним
         </div>
-        <form class="order__input-phone form">
+        <form class="order__input-phone form" novalidate>
           <div class="input-wrapper form__input-wrapper">
             <input id="name" name="phone" class="input form__input" type="text" required data-validation="required" />
             <label for="phone" class="label form__label">
@@ -763,10 +763,10 @@
       </div>
     </div>
 
-    <div class="complete__pop-up">
-      <div class="complete__backdrop"></div>
+    <div data-complete-popup class="complete__pop-up">
+      <div data-backdrop class="complete__backdrop"></div>
       <div class="complete__window">
-        <button class="close-btn pop-up__close-btn" aria-label="close pop up">
+        <button data-popup-close class="close-btn pop-up__close-btn" aria-label="close pop up">
           <span class="close-btn__line"></span>
           <span class="close-btn__line"></span>
         </button>
