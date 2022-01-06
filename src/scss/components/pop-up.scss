@@ -1,0 +1,250 @@
+.order__pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+
+    &--open {
+        opacity: 1;
+        visibility: visible;
+
+        .order__window {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.order__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+}
+
+.order__window {
+    @include reg;
+    position: relative;
+    background-color: #EBEBEB;
+    color: #3F3D56;
+    padding: 40px;
+    z-index: 1;
+    margin: 0 auto;
+    width: 980px;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity .3s ease, transform .3s ease;
+
+    @media (max-width: $br1) {
+        max-width: 90%;
+    }
+
+    @media (max-width: $br4) {
+        max-width: none;
+    }
+}
+
+.pop-up__close-btn {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.close-btn__line {
+    width: 30px;
+    height: 3px;
+    background-color: #3F3D56;
+    display: block;
+
+    &:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -2px;
+    }
+}
+
+.order__title {
+    font-weight: 450;
+    font-size: size(40, 24);
+    line-height: 120%;
+    max-width: 70%;
+    margin-bottom: 40px;
+
+    @media (max-width: $br1) {
+        max-width: 90%;
+    }
+
+    @media (max-width: $br4) {
+        max-width: 95%;
+        margin-bottom: 20px;
+    }
+}
+
+.order__text {
+    @include reg;
+    margin-top: 40px;
+    font-weight: 450;
+    font-size: size(32, 18);
+    line-height: 120%;
+    color: #3F3D56;
+}
+
+.order__network {
+    cursor: pointer;
+    margin-top: 15px;
+    width: 48px;
+    height: 48px;
+
+    &:first-of-type {
+        margin-right: 20px;
+    }
+}
+
+
+// ========================-Form-========================
+
+.input-wrapper {
+    position: relative;
+    color: #3F3D56;
+    font-size: 20px;
+
+    &.active {
+        >.label {
+            display: none;
+        }
+    }
+
+    &.error {
+        >.label {
+            color: #e73737;
+        }
+
+        >.form__input-error {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+textarea {
+    border: none;
+    resize: none;
+}
+
+.order__input-phone {
+    display: flex;
+
+    @media (max-width: $br1) {
+        flex-direction: column;
+    }
+}
+
+.input-wrapper {
+    margin-right: 24px;
+
+    @media (max-width: $br4) {
+        margin-right: 0;
+    }
+}
+
+.input {
+    @include reg;
+    width: 482px;
+    height: 72px;
+    border-radius: 33px;
+    background-color: #fff;
+    line-height: 1em;
+    color: #3F3D56;
+    font-size: 20px;
+    padding-left: 40px;
+
+    @media (max-width: $br1) {
+        width: 323px;
+    }
+
+    @media (max-width: $br4) {
+        width: 100%;
+    }
+}
+
+.label {
+    position: absolute;
+    font-size: size(20, 16);
+    left: 40px;
+    top: 26px;
+    line-height: 1em;
+    pointer-events: none;
+    transition: transform, opacity, font-size;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+}
+
+.form__input-error {
+    color: #e73737;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity, visibility;
+    transition-duration: 0.3;
+    transition-timing-function: ease;
+    margin-top: 4px;
+    display: block;
+}
+
+abbr {
+    color: var(--red);
+    text-decoration: none !important;
+}
+
+.order__call-me {
+    @include reg;
+    background-color: #DC5349;
+    box-shadow: 0px 18px 50px rgba(235, 87, 87, 0.35);
+    border-radius: 33px;
+    color: #fff;
+    font-size: size(20, 16);
+    width: 323px;
+    height: 72px;
+    line-height: 100%;
+
+    &:hover {
+        background-color: #dd4136;
+    }
+
+    @media (max-width: $br4) {
+        width: 100%;
+    }
+}
+
+//Reset autofill styles
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.01) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}

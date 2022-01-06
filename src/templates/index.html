@@ -20,7 +20,7 @@
   <div data-cursor class="cursor"></div>
   <header class="header">
     <div class="container header__container">
-      <nav class="nav header__nav">
+      <nav class="nav header__navbar">
         <div class="header__logo">
           <svg class="logo" width="195" height="58" viewBox="0 0 195 58" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -34,27 +34,27 @@
           <img class="header__arrow" src="./img/arrow-down.png" alt="Указатель вниз">
         </div>
         <ul class="nav-menu header__menu">
-          <li class="nav-list header__list">
+          <li class="nav-item header__item">
             <a href="#">
               Замовити онлайн
             </a>
           </li>
-          <li class="nav-list header__list">
+          <li class="nav-item header__item">
             <a href="#">
               Переваги
             </a>
           </li>
-          <li class="nav-list header__list">
+          <li class="nav-item header__item">
             <a href="#">
               Наші клієнти
             </a>
           </li>
-          <li class="nav-list header__list">
+          <li class="nav-item header__item">
             <a href="#">
               Оплата та доставка
             </a>
           </li>
-          <li class="nav-list header__list">
+          <li class="nav-item header__item">
             <a href="#">
               Контакти
             </a>
@@ -65,11 +65,12 @@
             <img class="header__network" src="./img/viber.svg" alt="Viber">
             <img class="header__network" src="./img/telegram.svg" alt="Telegram">
           </div>
-          <div class="header__hamburger">
-            <span class="header__bar"></span>
-            <span class="header__bar"></span>
-            <span class="header__bar"></span>
-          </div>
+          <button class="header__burger">
+            <span class="header__bar header__bar-first"></span>
+            <span class="header__bar header__bar-second"></span>
+            <span class="header__bar header__bar-third"></span>
+            <span class="header__bar header__bar-fourth"></span>
+          </button>
         </div>
       </nav>
     </div>
@@ -728,6 +729,58 @@
         </div>
       </div>
     </footer>
+    <div class="order__pop-up">
+      <div class="order__backdrop"></div>
+      <div class="order__window">
+        <button class="close-btn pop-up__close-btn" aria-label="close pop up">
+          <span class="close-btn__line"></span>
+          <span class="close-btn__line"></span>
+        </button>
+        <div class="order__title">
+          Оставьте свой номер телефона
+          и мы вам перезвоним
+        </div>
+        <form class="order__input-phone form">
+          <div class="input-wrapper form__input-wrapper">
+            <input id="name" name="phone" class="input form__input" type="text" required data-validation="required" />
+            <label for="phone" class="label form__label">
+              <span>Номер телефона</span>
+              <abbr title="required">*</abbr>
+            </label>
+            <small class="form__input-error">Поле, обязательное для заполнения</small>
+          </div>
+          <button class="order__call-me">
+            Перезвоните мне
+          </button>
+        </form>
+        <div class="order__text">
+          или напишите нам в мессенджеры:
+        </div>
+        <div class="order__social">
+          <img class="order__network" src="./img/viber.svg" alt="Viber">
+          <img class="order__network" src="./img/telegram.svg" alt="Telegram">
+        </div>
+      </div>
+    </div>
+
+    <div class="complete__pop-up">
+      <div class="complete__backdrop"></div>
+      <div class="complete__window">
+        <button class="close-btn pop-up__close-btn" aria-label="close pop up">
+          <span class="close-btn__line"></span>
+          <span class="close-btn__line"></span>
+        </button>
+        <div class="complete__form">
+          <img class="complete__img" src="./img/popup-complete.svg" alt="Конверт">
+          <div class="complete__title">
+            Дякуємо за замовлення!
+          </div>
+          <div class="complete__text">
+            Ми отримали заявку, скоро з вами зв'яжеться менеджер.
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <!-- BEGIN scripts -->
     <script src="./js/runtime-app.js"></script> 

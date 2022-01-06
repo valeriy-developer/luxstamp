@@ -4,16 +4,16 @@
     line-height: 100%;
     color: #3F3D56;
     position: fixed;
+    background-color: #EBEBEB;
+    padding-top: size(16, 12);
+    padding-bottom: size(16, 12);
     top: 0;
     left: 0;
     width: 100%;
     z-index: 500;
-    padding-top: size(16, 12);
-    padding-bottom: size(16, 12);
-    background-color: #EBEBEB;
 }
 
-.header__nav {
+.header__navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,11 +40,35 @@
     cursor: pointer;
 }
 
-.header__menu {
+.nav-menu {
     display: flex;
+    
+    @media (max-width: $br1) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #3F3D56;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #ebebeb;
+        gap: 20px;
+        transition: visibility .3s ease, opacity .3s ease;
+    }
 }
 
-.header__list {
+.header__menu-active {
+    @media (max-width: $br1) {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.nav-item {
     @include reg;
     font-size: size(18, 14);
     margin-right: vw(50);
@@ -54,7 +78,8 @@
     }
 
     @media (max-width: $br1) {
-        display: none;
+        margin-right: 0;
+        font-size: 24px;
     }
 }
 
@@ -84,17 +109,46 @@
     align-items: center;
 }
 
-.header__hamburger {
-    margin-left: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.header__burger {
+    position: relative;
     height: 16px;
     width: 26px;
+    cursor: pointer;
+    margin-left: 16px;
+    background-color: transparent;
 }
 
 .header__bar {
-    width: 100%;
+    display: block;
+    position: absolute;
     height: 2px;
+    width: 100%;
     background-color: #3F3D56;
+    left: 0;
+    transition: .3s all linear;
+}
+
+.header__bar-first {
+    top: 0;
+}
+
+.header__bar-second, .header__bar-third {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__bar-fourth {
+    bottom: 0;
+}
+
+.header__burger-active .header__bar-first, .header__burger-active .header__bar-fourth {
+    opacity: 0;
+}
+
+.header__burger-active .header__bar-second {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.header__burger-active .header__bar-third {
+    transform: translateY(-50%) rotate(-45deg);
 }

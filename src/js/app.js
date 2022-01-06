@@ -1,3 +1,13 @@
+import {menu} from './burger.js'
+import {popup} from './popUp.js'
+import {form} from './input.js'
+import {complete} from './complete.js'
+
+menu()
+popup()
+form()
+complete()
+
 const lerp = (a, b, n) => {
   return a * (1 - n) + b * n
 }
